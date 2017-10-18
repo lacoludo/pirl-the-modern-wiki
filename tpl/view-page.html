@@ -1,0 +1,48 @@
+<!-- PAGE TITLE -->
+<section id="page-title" class="page-title-parallax page-title-center text-dark" style="background-image:url(assets/img/page-title-parallax.jpg);">
+  <div class="container">
+    <div class="page-title col-md-8">
+      <h1>{{page.latestRevision.title}}</h1>
+      <span>Mis à jour le {{page.latestRevision.updated_at | date:'medium'}}</span>
+    </div>
+  </div>
+</section>
+<!-- END: PAGE TITLE -->
+
+<!-- CONTENT -->
+<section class="content">
+  <div class="container">
+    <div class="row">
+
+      <!-- Page -->
+      <div class="post-content float-right post-modern post-content-single col-md-9">
+        <!-- Page item -->
+        <div class="post-item">
+          <div class="post-image">
+            <a href="#">
+              <img alt="" src="assets/img/525x350.jpg">
+            </a>
+          </div>
+          <div class="post-content-details">
+            <div class="post-title">
+              <h2>{{page.latestRevision.title}}</h2>
+            </div>
+            <div class="post-description">
+              {{page.latestRevision.content}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- END: Page -->
+
+      <!-- Sidebar-->
+      <div id="sidebar" class="sidebar sidebar-modern col-md-3">
+
+      </div>
+      <!-- END: Sidebar-->
+
+    </div>
+  </div>
+</section>
+<!-- END: CONTENT -->

@@ -1,0 +1,42 @@
+<!-- PAGE TITLE -->
+<section id="page-title" class="page-title-parallax page-title-center text-dark" style="background-image:url(assets/img/page-title-parallax.jpg);">
+  <div class="container">
+    <div class="page-title col-md-8">
+      <h1>Page : poster</h1>
+    </div>
+  </div>
+</section>
+<!-- END: PAGE TITLE -->
+
+
+<section class="content">
+  <div class="container">
+
+    <form name="EditPostForm">
+      <div class="form-group">
+        <label for="inputTitle">Titre</label>
+        <input ng-model="post.title" id="inputTitle" type="text" class="form-control" placeholder="Titre">
+      </div>
+      <div class="form-group">
+        <label for="inputTitle">Catégorie</label>
+        <select ng-model="post.category" id="inputCategory" class="form-control">
+          <option value="" disabled selected>Veuillez choisir une catégorie</option>
+          <option value="1">TV</option>
+          <option value="2">Film</option>
+          <option value="3">Jeu vidéo</option>
+        </select>
+        <!-- <input type="text" class="form-control" id="inputCategory" placeholder="Category" ng-model="post.category"> -->
+      </div>
+      <div class="form-group">
+        <label for="textareaContent">Contenu</label>
+        <textarea ng-model="post.content" class="form-control" rows="19" id="textareaContent"></textarea>
+      </div>
+      <!-- <div class="form-group">
+            <label for="inputTags">Tags</label>
+            <input type="text" class="form-control" id="inputTags" placeholder="Tags #1, Tags #2, ..." ng-model="post.tags">
+        </div> -->
+      <button type="submit" class="btn btn-primary" ng-click="save(post)">Poster</button>
+    </form>
+
+  </div>
+</section>

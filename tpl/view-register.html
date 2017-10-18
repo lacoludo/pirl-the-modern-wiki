@@ -1,0 +1,40 @@
+<section class="parallax fullscreen" style="background-image: url(assets/img/1920x1280.jpg)">
+	<div class="background-overlay"></div>
+	<div class="container container-fullscreen">
+		<div class="text-middle text-light">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 p-30">
+					<div class="col-md-12">
+						<h3>Inscrivez-vous</h3>
+						<p>Créez un compte en entrant les informations ci-dessous.</p>
+					</div>
+					<form class="form-transparent-fields">
+						<div class="col-md-6 form-group">
+							<label for="inputEmail" class="sr-only">E-mail</label>
+							<input ng-model="register.email" id="inputEmail" type="text" placeholder="E-mail" class="form-control input-lg">
+						</div>
+						<div class="col-md-6 form-group">
+							<label for="inputUsername" class="sr-only">Username</label>
+							<input ng-model="register.username" id="inputUsername" type="text" placeholder="Username" class="form-control input-lg">
+						</div>
+						<div class="col-md-6 form-group">
+							<label for="inputPassword" class="sr-only">Mot de passe</label>
+							<input ng-model="register.password" id="inputPassword" type="password" placeholder="Mot de passe" class="form-control input-lg">
+						</div>
+						<div class="col-md-6 form-group">
+							<label for="inputPassword_confirmation" class="sr-only">Confirmez mot de passe</label>
+							<input ng-model="register.password_confirmation" id="inputPassword_confirmation" type="password" placeholder="Confirmez mot de passe" class="form-control input-lg">
+						</div>
+						<div class="col-md-12 form-group">
+							<button ng-click="register(register.email, register.username, register.password, register.password_confirmation)" ng-keyup="$event.keyCode == 13 && submitFunc()" type="submit" class="btn btn-primary">Inscrivez-vous </button>
+						</div>
+						<div class="col-md-12 form-group">
+							<p class="text-left">Vous avez déjà un compte ? <a href="#/admin/login">Connexion</a>
+						</div>
+					</form>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,27 @@
+<section class="parallax text-light fullscreen" style="background-image: url(assets/img/1920x1280.jpg)">
+  <div class="background-overlay"></div>
+  <div class="container container-fullscreen">
+    <div class="text-middle text-light">
+      <div class="row">
+        <div class="col-md-3 center">
+          <h3>Connectez-vous</h3>
+          <form class="form-grey-fields">
+            <div class="form-group">
+              <label for="inputUsername" class="sr-only">Identifiant</label>
+              <input ng-model="user.username" id="inputUsername" type="text" placeholder="Identifiant" class="form-control">
+            </div>
+            <div class="form-group m-b-5">
+              <label for="inputPassword" class="sr-only">Mot de passe</label>
+              <input ng-model="user.password" id="inputPassword" type="password" placeholder="Mot de passe" class="form-control">
+            </div>
+            <div class="text-left form-group">
+              <button ng-click="signIn(user.username, user.password)" class="btn btn-primary" type="button">Connexion</button>
+            </div>
+          </form>
+          <p class="text-left">Vous n'avez pas encore de compte ? <a href="#/admin/register">Inscrivez-vous</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

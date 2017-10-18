@@ -1,0 +1,64 @@
+<!-- PAGE TITLE -->
+<section id="page-title" class="page-title-parallax page-title-center text-dark" style="background-image:url(assets/img/page-title-parallax.jpg);">
+  <div class="container">
+    <div class="page-title col-md-8">
+      <h1>Dashboard : Admin</h1>
+    </div>
+  </div>
+</section>
+<!-- END: PAGE TITLE -->
+
+<!-- PAGE CONTENT -->
+<section class="content">
+  <div class="container">
+
+    <div style="margin-bottom:80px">
+      <a href="#/admin/post/create" class="btn btn-primary">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        <span>Créer une nouvelle page</span>
+      </a>
+      <a href="#/admin/post/create-category" class="btn btn-primary">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        <span>Créer une nouvelle catégorie</span>
+      </a>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Actions</th>
+            <th>Catégorie</th>
+            <th>Titre</th>
+            <th>Créé</th>
+            <th>Mis-à-jour</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="page in pages">
+            <td>
+              <a href="#/page/{{page.id}}" class="btn btn-success btn-xs">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <span>Voir</span>
+              </a>
+              <a href="#/page/{{page.id}}" class="btn btn-warning btn-xs">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <span>Éditer</span>
+              </a>
+              <a ng-click="deletePage(page.id)" class="btn btn-danger btn-xs">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+                <span>Supprimer</span>
+              </a>
+            </td>
+            <td>{{page.category && page.category.name}}</td>
+            <td>{{page.latestRevision.title}}</td>
+            <td>{{page.created | date:'medium'}}</td>
+            <td>{{page.updated | date:'medium'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+<!-- END: PAGE CONTENT -->

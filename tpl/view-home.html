@@ -1,0 +1,49 @@
+<section class="p-t-40 p-b-40">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="heading-fancy heading-line">
+          <h4>JEU VIDÉO</h4>
+        </div>
+        <div class="post-thumbnail-list">
+          <div class="post-thumbnail-entry" ng-repeat="page in pages.games">
+            <img alt="" src="assets/img/200x130.jpg">
+            <div class="post-thumbnail-content">
+              <h4><a href="#/page/{{page.id}}">{{page.latestRevision.title}}</a></h4>
+              <span class="post-category"><i class="fa fa-tag"></i> Games</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="heading-fancy heading-line">
+          <h4>FILM</h4>
+        </div>
+        <div class="post-thumbnail-list">
+          <div class="post-thumbnail-entry" ng-repeat="page in pages.movies">
+            <img alt="" src="assets/img/200x130.jpg">
+            <div class="post-thumbnail-content">
+              <h4><a href="#/page/{{page.id}}">{{page.latestRevision.title}}</a></h4>
+              <span class="post-category"><i class="fa fa-tag"></i> Movies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="heading-fancy heading-line">
+          <h4>TV</h4>
+        </div>
+        <div class="post-thumbnail-list">
+          <div class="post-thumbnail-entry" ng-repeat="page in pages.tv">
+            <div ng-repeat="category in page.category"></div>
+            <img alt="" src="assets/img/200x130.jpg">
+            <div class="post-thumbnail-content">
+              <h4><a href="#/page/{{page.id}}">{{page.latestRevision.title}}</a></h4>
+              <span class="post-category"><i class="fa fa-tag"></i> TV</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

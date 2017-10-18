@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="pirlApp">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="GIRARDIN Paul, KHODABUKUS Irfaan, LACOUTURE Ludovic, MAVILLAZ Rémi">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Title -->
+  <title>PIRL | Le wiki moderne</title>
+  <!-- Favicon -->
+  <!-- <link rel="shortcut icon" href="assets/img/favicon.png"> -->
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+  <!-- Bootstrap 3 Wysiwyg 5 -->
+  <link rel="stylesheet" href="assets/plugins/bootstrap3-wysiwyg5/css/bootstrap3-wysiwyg5.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/font-awesome.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css">
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="assets/plugins/owlcarousel/owl.carousel.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="assets/plugins/magnific-popup/magnific-popup.css">
+
+  <!-- Template base -->
+  <link rel="stylesheet" href="assets/css/theme-base.css">
+  <!-- Template elements -->
+  <link rel="stylesheet" href="assets/css/theme-elements.css">
+  <!-- Responsive classes -->
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+  <!-- Template color -->
+  <link rel="stylesheet" href="assets/css/color-variations/red-dark.css" media="screen" title="red-dark">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600%7CRaleway:100,300,600,700,800" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300,800,700,600" />
+
+  <!-- jQuery -->
+  <script src="assets/plugins/jquery/jquery-1.11.2.min.js"></script>
+  <!-- Plugins compressed -->
+  <script src="assets/js/plugins-compressed.js"></script>
+
+  <script>
+    window.searchText = "";
+
+    //alert("out");
+    window.showSearchBar = function() {
+      //alert("in");
+        $("body").toggleClass("top-search-active");
+        $("top-search").find('input').focus();
+        return false;
+    };
+  </script>
+</head>
+
+<body class="wide">
+
+  <!-- WRAPPER -->
+  <div class="wrapper">
+
+    <!-- TOPBAR -->
+    <div id="topbar">
+      <div class="container">
+        <div class="topbar-dropdown">
+          <div class="title">
+            <i class="fa fa-user"></i>
+            <a href="#/admin">Mon compte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END: TOPBAR -->
+
+    <!-- HEADER -->
+    <header id="header">
+      <div id="header-wrap">
+        <div class="container">
+
+          <!--LOGO-->
+          <div id="logo">
+            <a href="#/" class="logo">
+              <img src="assets/img/logo.png" alt="PIRL Logo">
+            </a>
+          </div>
+          <!--END: LOGO-->
+
+          <!--TOP SEARCH -->
+          <div id="top-search">
+            <a id="top-search-trigger">
+              <i class="fa fa-search"></i>
+              <i class="fa fa-close"></i>
+            </a>
+            <form action="#/view-search-results-page" method="get">
+              <input type="text" name="q" class="form-control" value="" placeholder="Commencez à taper & appuyez sur &quot;Entrer&quot;">
+            </form>
+          </div>
+          <!--END: TOP SEARCH -->
+
+          <!-- <div ng-controller="SearchController">
+            <input ng-model="searchText" ng-change="change(text)" type="text" placeholder="Search" />
+            <div ng-repeat="entry in entries | limitTo: 5">
+            <span>
+              <a href="#/page/{{page.id}}">{{entry.title}}</a>
+            </span>
+            <hr>
+            <p>{{entry.content}}</p>
+            </div>
+          </div> -->
+
+        </div>
+      </div>
+    </header>
+    <!-- END: HEADER -->
+
+    <!-- CATEGORIES -->
+    <div ng-view></div>
+    <!-- END: CATEGORIES -->
+
+    <!-- FOOTER -->
+    <footer id="footer" class="background-dark text-grey">
+      <div class="copyright-content">
+        <div class="container">
+          <div class="row">
+            <div class="copyright-text col-md-6"> &copy; 2017 PIRL - Le wiki moderne. Tous droits réservés.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END: FOOTER -->
+
+  </div>
+  <!-- END: WRAPPER -->
+
+  <!-- GO TOP BUTTON -->
+  <a href="#" class="gototop gototop-button">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+  <!-- END: GO TOP BUTTON -->
+
+  <!-- Bootstrap -->
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Bootstrap 3 Wysiwyg 5 -->
+  <script src="assets/plugins/bootstrap3-wysiwyg5/js/wysihtml5-0.3.0.min.js"></script>
+  <script src="assets/plugins/bootstrap3-wysiwyg5/js/bootstrap3-wysihtml5.js"></script>
+  <!-- Angular -->
+  <script src="assets/plugins/angular/angular.min.js"></script>
+  <script src="assets/plugins/angular/angular-route.min.js"></script>
+  <!-- <script>
+    angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
+  </script> -->
+  <!-- App -->
+  <script src="assets/js/pirl.api.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/controllers.js"></script>
+  <script src="assets/js/directives.js"></script>
+  <script src="assets/js/services.js"></script>
+  <!-- Theme Base, Components and Settings -->
+  <script src="assets/js/theme-functions.js"></script>
+
+</body>
+
+</html>
